@@ -1,6 +1,5 @@
 // import 'package:abdaluziz_hw_1/Views/CustomAppBar.dart';
-import 'package:abdaluziz_hw_1/theme/styles.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:abdaluziz_hw_1/Views/CustomAppBar.dart';
 import 'package:flutter/material.dart';
 import 'package:abdaluziz_hw_1/models/login_models.dart';
 import 'package:abdaluziz_hw_1/theme/color.dart';
@@ -41,25 +40,8 @@ class _LoginScreenState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    const moonIcon = CupertinoIcons.moon_stars;
-
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        actions: [
-          const SizedBox(width: 20),
-          IconButton(
-            icon: const Icon(
-              moonIcon,
-              color: Colors.grey,
-            ),
-            onPressed: () {
-              Themestyles().changeTheme();
-            },
-          ),
-        ],
-      ),
+      appBar: const CustomAppBar(),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Form(
@@ -93,7 +75,7 @@ class _LoginScreenState extends State<LoginPage> {
               ),
               AbdaluzizButton(
                   voidCallback: () {},
-                  name: "project",
+                  name: "دخول",
                   shadowColor: AppColor.secandryColor),
             ],
           ),
