@@ -1,3 +1,4 @@
+import 'package:abdaluziz_hw_1/Views/CustomAppBar.dart';
 import 'package:abdaluziz_hw_1/Views/home_page.dart';
 import 'package:abdaluziz_hw_1/theme/styles.dart';
 import 'package:flutter/material.dart';
@@ -14,22 +15,7 @@ class ModeIcon extends StatelessWidget {
     HomePage crt = Get.put(HomePage());
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        actions: [
-          const SizedBox(width: 20),
-          IconButton(
-            icon: const Icon(
-              moonIcon,
-              color: Colors.grey,
-            ),
-            onPressed: () {
-              Themestyles().changeTheme();
-            },
-          ),
-        ],
-      ),
+      appBar: const CustomAppBar(),
     );
   }
 }
